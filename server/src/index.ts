@@ -14,8 +14,12 @@ const io = new Server(server, {
     }
 })
 
-io.on("connection", () => {
+io.on("connection", (socket) => {
     console.log('user is connected')
+
+    socket.on('disconnect', () => {
+        console.log('user is disconnected')
+    })
 })
 
 server.listen(port, () => {
