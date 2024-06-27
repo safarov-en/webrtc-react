@@ -1,29 +1,10 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import socketIO from 'socket.io-client'
-const WS = "http://localhost:8080"
+import { Join } from './components/JoinButton';
 
 function App() {
-  useEffect(() => {
-    socketIO(WS)
-  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex items-center justify-center w-screen h-screen">
+      <Join />
     </div>
   );
 }
