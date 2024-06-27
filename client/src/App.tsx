@@ -1,5 +1,5 @@
 import './App.css';
-import { Join } from './components/JoinButton';
+import { Join } from './components/CreateButton';
 
 function App() {
   return (
