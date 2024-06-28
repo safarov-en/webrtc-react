@@ -41,6 +41,6 @@ export const RoomProvider: ReactFC = ({ children }) => {
         ws.on('get-users', getUsers)
     }, [])
     return (
-        <RoomContext.Provider value={{ws, me}}>{children}</RoomContext.Provider>
+        <RoomContext.Provider value={{ws, me, stream}}>{children}</RoomContext.Provider>
     )
 }
